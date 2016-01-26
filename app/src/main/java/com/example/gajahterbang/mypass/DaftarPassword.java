@@ -26,7 +26,7 @@ public class DaftarPassword extends Activity{
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         lView = (ListView)findViewById(R.id.listView);
-        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
+        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,mobil);
         lView.setAdapter(adapter);
     }
 }
