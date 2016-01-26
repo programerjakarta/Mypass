@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         ePassword = (EditText)findViewById(R.id.password);
         tv3 = (TextView)findViewById(R.id.textView3);
         firstButton = (Button)findViewById(R.id.login);
-        btn2= (Button)findViewById(R.id.btn2);
         firstButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
