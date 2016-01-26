@@ -10,7 +10,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.gajahterbang.mypass.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:showIn="@layout/activity_main"
+    android:nestedScrollingEnabled="true">
 
     <TextView
         android:layout_width="wrap_content"
@@ -73,4 +74,5 @@
         android:id="@+id/textView3"
         android:layout_below="@+id/login"
         android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

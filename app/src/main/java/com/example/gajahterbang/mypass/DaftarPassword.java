@@ -1,10 +1,11 @@
 package com.example.gajahterbang.mypass;
 
-import android.app.Activity;
+//import android.app.Activity;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -15,15 +16,15 @@ import android.widget.TextView;
 import android.support.v7.app.ActionBarActivity;
 
 
-public class DaftarPassword extends Activity{
+public class DaftarPassword extends AppCompatActivity{
     ListView lView;
     ArrayAdapter<String> adapter;
     String[] mobil = {"sedan","jeep","pickup","truck"};
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.daftarpassword);
+        setContentView(R.layout.daftar_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override

@@ -14,7 +14,7 @@ import android.widget.TextView;
 import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
-    Button firstButton;
+    Button firstButton,btn2;
     EditText eUsername;
     EditText ePassword;
     TextView tv3;
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         ePassword = (EditText)findViewById(R.id.password);
         tv3 = (TextView)findViewById(R.id.textView3);
         firstButton = (Button)findViewById(R.id.login);
+        btn2= (Button)findViewById(R.id.btn2);
         firstButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +52,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+//    protected void onButtonClick(View v){
+//        btn2= (Button)findViewById(R.id.btn2);
+//        btn2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(MainActivity.this,DaftarPassword.class);
+//                startActivity(i);
+//            }
+//        });
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
