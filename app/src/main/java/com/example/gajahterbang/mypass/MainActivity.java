@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     EditText eUsername;
     EditText ePassword;
     TextView tv3;
+    FloatingActionButton fab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         ePassword = (EditText)findViewById(R.id.password);
         tv3 = (TextView)findViewById(R.id.textView3);
         firstButton = (Button)findViewById(R.id.login);
+        fab = (FloatingActionButton)findViewById(R.id.fab);
         firstButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,6 +50,14 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     tv3.setText("Login Gagal");
                 }
+            }
+        });
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent j = new Intent(MainActivity.this,Crud.class);
+                startActivity(j);
             }
         });
     }
