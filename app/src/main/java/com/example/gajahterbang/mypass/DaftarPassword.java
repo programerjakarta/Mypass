@@ -2,6 +2,7 @@ package com.example.gajahterbang.mypass;
 
 //import android.app.Activity;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -48,6 +49,10 @@ public class DaftarPassword extends AppCompatActivity{
 //                System.out.print(lView.getSelectedItem().toString());
                 String lst_txt = parent.getItemAtPosition(position).toString().trim();
                 tv4.setText(lst_txt);
+                Intent i = new Intent(DaftarPassword.this, SingleList.class);
+                // sending data to new activity
+                i.putExtra("data",lst_txt );
+                startActivity(i);
 
 //                System.out.println("Display text"+lst_txt );
             }
