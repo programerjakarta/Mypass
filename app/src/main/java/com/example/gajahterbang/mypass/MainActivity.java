@@ -8,9 +8,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    Button firstButton;
+    EditText eUsername;
+    EditText ePassword;
+    TextView tv3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +30,21 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+            }
+        });
+        eUsername = (EditText)findViewById(R.id.username);
+        ePassword = (EditText)findViewById(R.id.password);
+        tv3 = (TextView)findViewById(R.id.textView3);
+        firstButton = (Button)findViewById(R.id.login);
+        firstButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (eUsername.getText().toString().trim().equals("arif") && ePassword.getText().toString().trim().equals("arif"))
+                {
+                    tv3.setText("Login Sukses");
+                } else {
+                    tv3.setText("Login Gagal");
+                }
             }
         });
     }

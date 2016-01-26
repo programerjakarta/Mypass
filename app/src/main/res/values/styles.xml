@@ -20,4 +20,8 @@
         <item name="colorControlNormal">@color/indigo_500</item>
         <item name="colorControlActivated">@color/pink_500</item>
     </style>
+    <style name="MyButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/indigo_500</item>
+        <item name="colorButtonNormal">@color/pink_500</item>
+    </style>
 </resources>
