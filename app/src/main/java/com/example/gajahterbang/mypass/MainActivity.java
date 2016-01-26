@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
     Button firstButton;
@@ -42,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
                 if (eUsername.getText().toString().trim().equals("arif") && ePassword.getText().toString().trim().equals("arif"))
                 {
                     tv3.setText("Login Sukses");
+                    Intent i = new Intent(MainActivity.this,DaftarPassword.class);
+                    startActivity(i);
                 } else {
                     tv3.setText("Login Gagal");
                 }
