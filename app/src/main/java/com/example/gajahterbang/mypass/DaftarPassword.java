@@ -12,10 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.support.v7.app.ActionBarActivity;
 
-/**
- * Created by gajahterbang on 1/26/2016.
- */
+
 public class DaftarPassword extends Activity{
     ListView lView;
     ArrayAdapter<String> adapter;
@@ -24,9 +23,17 @@ public class DaftarPassword extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.daftarpassword);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-
+//        setSupportActionBar(toolbar);
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
         lView = (ListView)findViewById(R.id.listView);
-        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,mobil);
+        adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,mobil);
         lView.setAdapter(adapter);
     }
 }
