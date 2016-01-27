@@ -13,25 +13,59 @@
     tools:showIn="@layout/crud_main"
     android:nestedScrollingEnabled="true">
 
-    <Button
+
+    <EditText
+        android:hint="IPADDRESS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="add"
-        android:id="@+id/button"
-        android:onClick="newProduct"
-        android:layout_below="@+id/button2"
+        android:id="@+id/editTextIP"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2" />
+        android:inputType="text" />
 
-    <Button
+    <EditText
+        android:hint="Nama Server"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="find"
-        android:id="@+id/button2"
-        android:onClick="lookupProduct"
-        android:layout_below="@+id/editText2"
+        android:id="@+id/editTextNAMA"
+        android:layout_below="@+id/editTextIP"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:inputType="text" />
+
+    <EditText
+        android:hint="Username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextUSERNAME"
+        android:layout_below="@+id/editTextNAMA"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:hint="Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextPASSWORD"
+        android:layout_below="@+id/editTextUSERNAME"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:hint="Keterangan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextKETERANGAN"
+        android:layout_below="@+id/editTextPASSWORD"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
@@ -40,44 +74,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="delete"
-        android:id="@+id/button3"
-        android:onClick="removeProduct"
-        android:layout_below="@+id/button"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button"
-        android:layout_alignEnd="@+id/button" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/pid"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/passip"
-        android:layout_below="@+id/pid"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/pid"
-        android:layout_alignEnd="@+id/pid" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText2"
-        android:layout_below="@+id/passip"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/passip"
-        android:layout_alignEnd="@+id/passip" />
-
+        android:text="ADD"
+        android:id="@+id/butttonAdd"
+        android:layout_below="@+id/editTextKETERANGAN"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

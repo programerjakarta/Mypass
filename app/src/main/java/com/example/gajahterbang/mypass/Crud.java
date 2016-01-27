@@ -6,16 +6,20 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by gajahterbang on 1/27/2016.
  */
 public class Crud extends AppCompatActivity {
 
+    MyDBHandler myDb;
     TextView idView;
-    EditText ip;
+    EditText editTextIP,editTextNAMA,editTextUSERNAME,editTextPASSWORD,editTextKETERANGAN;
+    Button buttonadd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,18 +37,31 @@ public class Crud extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        myDb = new MyDBHandler(this);
+        editTextIP = (EditText)findViewById(R.id.editTextIP);
+        editTextNAMA= (EditText)findViewById(R.id.editTextNAMA);
+        editTextUSERNAME = (EditText)findViewById(R.id.editTextUSERNAME);
+        editTextPASSWORD = (EditText)findViewById(R.id.editTextPASSWORD);
+        editTextKETERANGAN = (EditText)findViewById(R.id.editTextKETERANGAN);
+        buttonadd = (Button)findViewById(R.id.butttonAdd);
 
 
     }
 
-    public void newPassword(View view) {
-        idView = (TextView) findViewById(R.id.pid);
-        ip = (EditText) findViewById(R.id.editText2);
-        MyDBHandler dbHandler = new MyDBHandler(this, null, null, 1);
-
-        Password password = new Password();
-
-        dbHandler.addPassword(password);
-        ip.setText("");
+    public void AddData(){
+        buttonadd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean isInserted = myDb.insertData(editTextIP.toString(),
+                        editTextNAMA.toString(),
+                        editTextUSERNAME.toString(),
+                        editTextPASSWORD.toString(),
+                        editTextKETERANGAN.toString());
+                if (isInserted == true)
+                    Toast.makeText(Crud.this,"Data Inserted",Toast.LENGTH_LONG).show();
+                else
+                    Toast.makeText(Crud.this,"Data not Inserted",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
