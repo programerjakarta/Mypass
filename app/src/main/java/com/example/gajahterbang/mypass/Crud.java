@@ -19,7 +19,7 @@ public class Crud extends AppCompatActivity {
     MyDBHandler myDb;
     TextView idView;
     EditText editTextIP,editTextNAMA,editTextUSERNAME,editTextPASSWORD,editTextKETERANGAN;
-    Button buttonadd;
+    Button buttonAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +43,13 @@ public class Crud extends AppCompatActivity {
         editTextUSERNAME = (EditText)findViewById(R.id.editTextUSERNAME);
         editTextPASSWORD = (EditText)findViewById(R.id.editTextPASSWORD);
         editTextKETERANGAN = (EditText)findViewById(R.id.editTextKETERANGAN);
-        buttonadd = (Button)findViewById(R.id.butttonAdd);
-
+        buttonAdd = (Button)findViewById(R.id.buttonAdd);
+        AddData();
 
     }
 
     public void AddData(){
-        buttonadd.setOnClickListener(new View.OnClickListener() {
+        buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 boolean isInserted = myDb.insertData(editTextIP.toString(),

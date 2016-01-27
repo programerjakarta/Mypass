@@ -75,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ADD"
-        android:id="@+id/butttonAdd"
+        android:id="@+id/buttonAdd"
         android:layout_below="@+id/editTextKETERANGAN"
         android:layout_centerHorizontal="true"
         android:onClick="AddData"/>
