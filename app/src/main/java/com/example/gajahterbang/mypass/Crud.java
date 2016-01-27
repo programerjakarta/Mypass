@@ -52,11 +52,12 @@ public class Crud extends AppCompatActivity {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean isInserted = myDb.insertData(editTextIP.toString(),
-                        editTextNAMA.toString(),
-                        editTextUSERNAME.toString(),
-                        editTextPASSWORD.toString(),
-                        editTextKETERANGAN.toString());
+//                    editTextIP.setText(editTextKETERANGAN.getText().toString());
+                boolean isInserted = myDb.insertData(editTextIP.getText().toString(),
+                        editTextNAMA.getText().toString(),
+                        editTextUSERNAME.getText().toString(),
+                        editTextPASSWORD.getText().toString(),
+                        editTextKETERANGAN.getText().toString());
                 if (isInserted == true)
                     Toast.makeText(Crud.this,"Data Inserted",Toast.LENGTH_LONG).show();
                 else
