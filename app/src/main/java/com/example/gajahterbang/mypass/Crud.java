@@ -6,11 +6,17 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 /**
  * Created by gajahterbang on 1/27/2016.
  */
 public class Crud extends AppCompatActivity {
+
+    TextView idView;
+    EditText ip;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,5 +33,18 @@ public class Crud extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+    }
+
+    public void newPassword(View view) {
+        idView = (TextView) findViewById(R.id.pid);
+        ip = (EditText) findViewById(R.id.editText2);
+        MyDBHandler dbHandler = new MyDBHandler(this, null, null, 1);
+
+        Password password = new Password();
+
+        dbHandler.addPassword(password);
+        ip.setText("");
     }
 }

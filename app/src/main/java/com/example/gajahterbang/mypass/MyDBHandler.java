@@ -38,7 +38,7 @@ public class MyDBHandler extends SQLiteOpenHelper{
         onCreate(db);
     }
 
-    public void addProduct(Password password) {
+    public void addPassword(Password password) {
 
         ContentValues values = new ContentValues();
         values.put(COLUMN_IP, password.getIP());
