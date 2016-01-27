@@ -77,5 +77,6 @@
         android:text="ADD"
         android:id="@+id/butttonAdd"
         android:layout_below="@+id/editTextKETERANGAN"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="AddData"/>
 </RelativeLayout>
